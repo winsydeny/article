@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		html,body {
+			height: 100%;
+		}
+		.div{
+			height: 100%;
+			display: grid;
+			grid-template-columns:repeat(auto-fill,200px);
+			grid-template-rows: 100px 100px 100px;
+			/* grid-row-gap: 20px;
+			grid-column-gap: 20px; */
+			justify-content: center;
+			align-items: center;
+		}
+		.div div{
+			/* display: flex;
+			justify-content: center;
+			align-items: center; */
+			
+		}
+		.item-1{
+			background-color:black;拉钩
+		}
+	</style>
+</head>
+<body>
+	<div class="div">
+		<div class="item-1"><p>1</p></div>
+		<div style="background-color: red"><p>2</p></div>
+		<div style="background-color: green;"><p>3</p></div>
+		<div style="background-color: yellow;"><p>4</p></div>
+		<div style="background-color: violet;"><p>5</p></div>
+		<div style="background-color: teal;"><p>6</p></div>
+	</div>
+</body>
+</html>
