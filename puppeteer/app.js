@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+const fs = require('fs');
 const iPhone = puppeteer.devices['iPhone 6'];
 
 // (async()=>{
@@ -19,11 +20,30 @@ const iPhone = puppeteer.devices['iPhone 6'];
 //     console.log(input)
 //     await button.click()
 //     // await page.screenshot({path: 'screenshot.png'});
-    
+
 //     // await browser.close();
 // })()
 
 
+
+
+// page.$()
+// (async () => {
+//   const browser = await puppeteer.launch({ headless: false });
+
+//   const page = await browser.newPage();
+//   // await page.emulate(iPhone);
+//   await page.setViewport({ width: 1920, height: 1080 })
+//   await page.goto('https://www.baidu.com');
+//   const input = await page.$('#kw');
+
+//   await input.type('hello puppeteer!', { delay: 100 });
+//   //
+//   // const text = await page.$eval('#su', el => el.value)
+//   // console.log(text);
+
+//   // await browser.close();
+// })()
 
 
 
@@ -39,7 +59,7 @@ const iPhone = puppeteer.devices['iPhone 6'];
 //     const browser = await puppeteer.launch({headless:false});
 //     const page = await browser.newPage();
 //     await page.goto('https://www.baidu.com');
-  
+
 //     // Get the "viewport" of the page, as reported by the page.
 //     const dimensions = await page.evaluate(() => {
 //       return {
@@ -48,39 +68,21 @@ const iPhone = puppeteer.devices['iPhone 6'];
 //         deviceScaleFactor: window.devicePixelRatio
 //       };
 //     });
-  
+
 //     console.log('Dimensions:', dimensions);
-  
+
 //     await browser.close();
 //   })();
-  
 
 
 
-
-//
-
-// ( async ()=>{
-//     const browser = await puppeteer.launch({headless:false});
-
-//     const page = await browser.newPage();
-//     // await page.emulate(iPhone);
-//     await page.setViewport({width:1200,height:800})
-//     await page.goto('https://www.baidu.com');
-//     await page.evaluate(()=>{
-//         setTimeout(() => {
-//            document.querySelector('#su').value = 'Google一下'
-//         }, 3000);
-//     })
-//     // await browser.close();
-// })()
 
 
 // login
 
 // ( async ()=>{
 //         const browser = await puppeteer.launch({headless:false});
-    
+
 //         const page = await browser.newPage();
 //         // await page.emulate(iPhone);
 //         await page.setViewport({width:1200,height:800})
@@ -104,3 +106,44 @@ const iPhone = puppeteer.devices['iPhone 6'];
 
 //         // await browser.close();
 //     })()
+
+
+
+
+
+// js
+
+// ( async ()=>{
+//     const browser = await puppeteer.launch({headless:false});
+
+//     const page = await browser.newPage();
+//     // await page.emulate(iPhone);
+//     await page.setViewport({width:1200,height:800})
+//     await page.goto('https://www.baidu.com');
+//     await page.evaluate(()=>{
+//         setTimeout(() => {
+//            document.querySelector('#su').value = 'Google一下'
+//         }, 3000);
+//     })
+//     // await browser.close();
+// })()
+
+
+
+
+// tracing
+
+
+// (async () => {
+//   const browser = await puppeteer.launch({ headless: true });
+//   const page = await browser.newPage();
+
+//   // Get the "viewport" of the page, as reported by the page.
+//   await page.tracing.start({ path: 'trace.json' });
+//   await page.goto('https://www.baidu.com');
+//   await page.tracing.stop();
+
+//   // console.log('Dimensions:', dimensions);
+
+//   await browser.close();
+// })();
